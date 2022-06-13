@@ -9,7 +9,7 @@ const StyledSlideOutAnchor = styled.div`
   position: relative;
 `;
 
-const SlideOutAnchor = ({ children }: { children: JSX.Element }) => {
+export const SlideOutAnchor = ({ children }: { children: JSX.Element }) => {
   return (
     <StyledSlideOutAnchor>
       <div id={slideOutAnchorId}></div>
@@ -17,5 +17,3 @@ const SlideOutAnchor = ({ children }: { children: JSX.Element }) => {
     </StyledSlideOutAnchor>
   );
 };
-
-export default SlideOutAnchor;

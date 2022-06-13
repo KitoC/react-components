@@ -57,7 +57,7 @@ const StyledSlideOutContent = styled.div`
   )}
 `;
 
-const SlideOut = (props: ISlideOutProps) => {
+export const SlideOut = (props: ISlideOutProps) => {
   const { Trigger, Content, origin = "bottom" } = props;
   const [isOpen, setIsOpen] = useState(false);
   const [targetNode, setTarget] = useState<null | HTMLElement>(null);
@@ -88,5 +88,3 @@ const SlideOut = (props: ISlideOutProps) => {
     </StyledSlideOut>
   );
 };
-
-export default SlideOut;
