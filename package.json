@@ -14,7 +14,8 @@
   "repository": "git@github.com:KitoC/react-components.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx rollup -c"
+    "build": "npx rollup -c",
+    "prepublishOnly": "yarn test && yarn build"
   },
   "keywords": [],
   "author": "",
