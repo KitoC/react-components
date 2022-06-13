@@ -16,13 +16,11 @@ export default [
         file: packageJson.main,
         format: "cjs",
         sourcemap: true,
-        file: `${buildDir}/cjs/index.js`,
       },
       {
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
-        file: `${buildDir}/esm/index.js`,
       },
     ],
     plugins: [
@@ -31,11 +29,9 @@ export default [
       typescript({ tsconfig: "./tsconfig.json" }),
     ],
   },
-  //   {
-  //     input: "dist/esm/types/index.d.ts",
-  //     output: [
-  //       { file: "dist/index.d.ts", format: "esm", file: "dist/types/index.d.ts" },
-  //     ],
-  //     plugins: [dts()],
-  //   },
+  {
+    input: "dist/esm/types/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    plugins: [dts()],
+  },
 ];
