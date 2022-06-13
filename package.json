@@ -1,8 +1,12 @@
 {
-  "name": "@skybrook/react-components",
+  "name": "@KitoC/react-components",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "git@github.com:KitoC/react-components.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx rollup -c"
