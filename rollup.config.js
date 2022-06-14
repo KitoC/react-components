@@ -10,7 +10,8 @@ const buildDir = "lib";
 export default [
   {
     input: "src/index.ts",
-    // "output.dir": "dist",
+    external: ["styled-components"],
+    globals: { "styled-components": "styled" },
     output: [
       {
         file: packageJson.main,
@@ -33,5 +34,7 @@ export default [
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
+    external: ["styled-components"],
+    globals: { "styled-components": "styled" },
   },
 ];
