@@ -15,7 +15,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "build": "npx rollup -c",
-    "prepublishOnly": "yarn test && yarn build"
+    "prepublishOnly": "yarn test && yarn build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "install-peers": "install-peers",
+    "prepare": "yarn install-peers"
   },
   "keywords": [],
   "author": "",
@@ -26,13 +30,25 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.5",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.3",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack4": "^6.5.9",
+    "@storybook/manager-webpack4": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "@types/styled-components": "^5.1.25",
+    "babel-loader": "^8.2.5",
     "clsx": "^1.1.1",
+    "install-peers": "^1.0.4",
+    "install-peers-cli": "^2.2.0",
     "rollup-plugin-dts": "^4.2.2",
     "tslib": "^2.4.0",
     "typescript": "^4.7.3"
